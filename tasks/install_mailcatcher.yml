@@ -17,6 +17,6 @@
   when: not mailcatcher_installed.stat.exists
 
 - name: Create upstart script for mailcatcher
-  template: src=mailcatcher.j2 dest=/etc/init.d/mailcatcher.conf mode=0644
+  template: src=mailcatcher.j2 dest=/etc/init/mailcatcher.conf mode=0644
   notify:
     - restart mailcatcher
